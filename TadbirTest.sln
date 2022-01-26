@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TadbirTest.MainApp.Persiste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TadbirTest.MainApp.Infrastructure", "Apps\MainApp\TadbirTest.MainApp.Infrastructure\TadbirTest.MainApp.Infrastructure.csproj", "{EEA2C49A-5AFF-4F4D-B151-D7F778C22D50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TadbirTest.MainApp.WorkerService", "Apps\MainApp\TadbirTest.MainApp.WorkerService\TadbirTest.MainApp.WorkerService.csproj", "{0AD8B877-C752-4863-94D0-BC24D4BA9062}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{EEA2C49A-5AFF-4F4D-B151-D7F778C22D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEA2C49A-5AFF-4F4D-B151-D7F778C22D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEA2C49A-5AFF-4F4D-B151-D7F778C22D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD8B877-C752-4863-94D0-BC24D4BA9062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD8B877-C752-4863-94D0-BC24D4BA9062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD8B877-C752-4863-94D0-BC24D4BA9062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD8B877-C752-4863-94D0-BC24D4BA9062}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{2E5BB674-A695-4525-9977-E913558F4F49} = {BF04E0E7-5FF5-4A92-8A00-7105D214EFFE}
 		{2D1AC09C-9E86-4C93-88EF-4273D8A9B027} = {BF04E0E7-5FF5-4A92-8A00-7105D214EFFE}
 		{EEA2C49A-5AFF-4F4D-B151-D7F778C22D50} = {BF04E0E7-5FF5-4A92-8A00-7105D214EFFE}
+		{0AD8B877-C752-4863-94D0-BC24D4BA9062} = {BF04E0E7-5FF5-4A92-8A00-7105D214EFFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1248A786-07EB-4A8D-8500-4AC7F77A99CD}
