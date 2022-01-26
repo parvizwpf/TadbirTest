@@ -1,0 +1,5 @@
+version: '3.4'
+services:
+  tadbirtest.mainapp.workerservice:
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
