@@ -2,7 +2,6 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using TadbirTest.Shared;
 using TadbirTest.Shared.Helpers;
 
 namespace TadbirTest.ConsoleApp.RabbitMQ
@@ -31,18 +30,13 @@ namespace TadbirTest.ConsoleApp.RabbitMQ
             long counter = 1;
             var source = new CancellationTokenSource(TimeSpan.FromSeconds(10));
             await busControl.StartAsync(source.Token);
-            
+
             try
             {
                 while (true)
                 {
                     var person = PersonMessageHelper.GetPersonMessage();
-
-                    await Task.Run(() =>
-                    {
-                        Console.WriteLine($"{counter} > Published Person [{person.FirstName} {person.LastName}]");
-                    });
-
+                    Console.WriteLine($"{counter} > Published Person [{person.FirstName} {person.LastName}]");
                     await busControl.Publish(person);
                     counter++;
                     await Task.Delay(3000);
