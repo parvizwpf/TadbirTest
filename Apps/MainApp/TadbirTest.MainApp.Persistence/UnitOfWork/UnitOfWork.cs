@@ -15,7 +15,7 @@ namespace TadbirTest.MainApp.Persistence.UnitOfWork
             ManageConnection();
         }
 
-        public IPersonRepository IPersonRepository => new PersonRepository();
+        public IPersonRepository IPersonRepository => new PersonRepository(this.dbConnection, this.transaction);
 
         public void StartTransaction()
         {

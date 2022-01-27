@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
+using System;
 using System.Threading.Tasks;
 using TadbirTest.MainApp.Infrastructure.Redis.Interfaces;
 using TadbirTest.Shared.Helpers;
@@ -17,7 +18,7 @@ namespace TadbirTest.MainApp.Infrastructure.Redis
         public async Task SetAsync(object obj)
         {
             var model = obj.ToByteArray();
-            await cache.SetAsync("Person_", model);
+            await cache.SetAsync($"Person_{Guid.NewGuid()}", model);
         }
     }
 }
