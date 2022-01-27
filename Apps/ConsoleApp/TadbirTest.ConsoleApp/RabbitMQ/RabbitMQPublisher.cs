@@ -8,9 +8,25 @@ namespace TadbirTest.ConsoleApp.RabbitMQ
 {
     public class RabbitMQPublisher
     {
+        public class RabbitMqConsts
+        {
+            public const string RabbitMqRootUri = "rabbitmq://localhost";
+            public const string RabbitMqUri = "rabbitmq://localhost/testQueue";
+            public const string UserName = "guest";
+            public const string Password = "guest";
+        }
+
         public static async Task PublishPerson()
         {
-            var busControl = Bus.Factory.CreateUsingRabbitMq();
+            var busControl = Bus.Factory.CreateUsingRabbitMq(config =>
+            {
+                config.Host(new Uri(RabbitMqConsts.RabbitMqRootUri), h =>
+                {
+                    h.Username(RabbitMqConsts.UserName);
+                    h.Password(RabbitMqConsts.Password);
+                });
+            });
+
             var source = new CancellationTokenSource(TimeSpan.FromSeconds(10));
             await busControl.StartAsync(source.Token);
 
@@ -18,17 +34,17 @@ namespace TadbirTest.ConsoleApp.RabbitMQ
             {
                 while (true)
                 {
-                    string value = await Task.Run(() =>
-                    {
-                        Console.WriteLine("Enter message (or quit to exit)");
-                        Console.Write("> ");
-                        return Console.ReadLine();
-                    });
+                    //string value = await Task.Run(() =>
+                    //{
+                    //    Console.WriteLine("Enter message (or quit to exit)");
+                    //    Console.Write("> ");
+                    //    return Console.ReadLine();
+                    //});
 
-                    if ("quit".Equals(value, StringComparison.OrdinalIgnoreCase))
-                        break;
+                    //if ("quit".Equals(value, StringComparison.OrdinalIgnoreCase))
+                    //    break;
 
-                    await busControl.Publish<IPersonMessage>(new PersonMessage
+                    await busControl.Publish(new PersonMessage
                     {
                         FirstName = "Roli",
                         LastName = "Moli",

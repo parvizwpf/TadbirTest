@@ -4,7 +4,7 @@ namespace TadbirTest.MainApp.Domain.UnitOfWork
 {
     public interface IUnitOfWork
     {
-        IPersonRepository IPersonRepository { get; }
+        IPersonRepository PersonRepository { get; }
         void StartTransaction();
         void Commit();
     }
