@@ -13,7 +13,7 @@ namespace TadbirTest.MainApp.Persistence
             services.AddSingleton<IDbConnection>(conn =>
                 new SqlConnection(conn.GetService<IConnectionConfig>().SqlConnection)
             );
-            services.AddTransient<IUnitOfWork>(uof =>
+            services.AddSingleton<IUnitOfWork>(uof =>
             new UnitOfWork.UnitOfWork(uof.GetService<IDbConnection>()));
             return services;
         }

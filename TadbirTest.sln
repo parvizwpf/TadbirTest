@@ -11,19 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{ADC9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C8211F6C-70F9-45FF-B0E8-DAFFE5E8A495}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TadbirTest.Shared", "Apps\Shared\TadbirTest.Shared\TadbirTest.Shared.csproj", "{683AEAC9-9F27-4FE4-ADC4-281413F504F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TadbirTest.Shared", "Apps\Shared\TadbirTest.Shared\TadbirTest.Shared.csproj", "{683AEAC9-9F27-4FE4-ADC4-281413F504F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TadbirTest.ConsoleApp", "Apps\ConsoleApp\TadbirTest.ConsoleApp\TadbirTest.ConsoleApp.csproj", "{994F4619-AAB9-4BB5-B667-7A7FD5DAA729}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TadbirTest.ConsoleApp", "Apps\ConsoleApp\TadbirTest.ConsoleApp\TadbirTest.ConsoleApp.csproj", "{994F4619-AAB9-4BB5-B667-7A7FD5DAA729}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TadbirTest.MainApp.Domain", "Apps\MainApp\TadbirTest.MainApp.Domain\TadbirTest.MainApp.Domain.csproj", "{11F35272-C331-414C-9568-221D80BAB367}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TadbirTest.MainApp.Domain", "Apps\MainApp\TadbirTest.MainApp.Domain\TadbirTest.MainApp.Domain.csproj", "{11F35272-C331-414C-9568-221D80BAB367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TadbirTest.MainApp.Application", "Apps\MainApp\TadbirTest.MainApp.Application\TadbirTest.MainApp.Application.csproj", "{2E5BB674-A695-4525-9977-E913558F4F49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TadbirTest.MainApp.Application", "Apps\MainApp\TadbirTest.MainApp.Application\TadbirTest.MainApp.Application.csproj", "{2E5BB674-A695-4525-9977-E913558F4F49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TadbirTest.MainApp.Persistence", "Apps\MainApp\TadbirTest.MainApp.Persistence\TadbirTest.MainApp.Persistence.csproj", "{2D1AC09C-9E86-4C93-88EF-4273D8A9B027}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TadbirTest.MainApp.Persistence", "Apps\MainApp\TadbirTest.MainApp.Persistence\TadbirTest.MainApp.Persistence.csproj", "{2D1AC09C-9E86-4C93-88EF-4273D8A9B027}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TadbirTest.MainApp.Infrastructure", "Apps\MainApp\TadbirTest.MainApp.Infrastructure\TadbirTest.MainApp.Infrastructure.csproj", "{EEA2C49A-5AFF-4F4D-B151-D7F778C22D50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TadbirTest.MainApp.Infrastructure", "Apps\MainApp\TadbirTest.MainApp.Infrastructure\TadbirTest.MainApp.Infrastructure.csproj", "{EEA2C49A-5AFF-4F4D-B151-D7F778C22D50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TadbirTest.MainApp.WorkerService", "Apps\MainApp\TadbirTest.MainApp.WorkerService\TadbirTest.MainApp.WorkerService.csproj", "{0AD8B877-C752-4863-94D0-BC24D4BA9062}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TadbirTest.MainApp.WorkerService", "Apps\MainApp\TadbirTest.MainApp.WorkerService\TadbirTest.MainApp.WorkerService.csproj", "{0AD8B877-C752-4863-94D0-BC24D4BA9062}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

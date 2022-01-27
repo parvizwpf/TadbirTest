@@ -3,6 +3,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using TadbirTest.Shared;
+using TadbirTest.Shared.Helpers;
 
 namespace TadbirTest.ConsoleApp.RabbitMQ
 {
@@ -27,29 +28,24 @@ namespace TadbirTest.ConsoleApp.RabbitMQ
                 });
             });
 
+            long counter = 1;
             var source = new CancellationTokenSource(TimeSpan.FromSeconds(10));
             await busControl.StartAsync(source.Token);
-
+            
             try
             {
                 while (true)
                 {
-                    //string value = await Task.Run(() =>
-                    //{
-                    //    Console.WriteLine("Enter message (or quit to exit)");
-                    //    Console.Write("> ");
-                    //    return Console.ReadLine();
-                    //});
+                    var person = PersonMessageHelper.GetPersonMessage();
 
-                    //if ("quit".Equals(value, StringComparison.OrdinalIgnoreCase))
-                    //    break;
-
-                    await busControl.Publish(new PersonMessage
+                    await Task.Run(() =>
                     {
-                        FirstName = "Roli",
-                        LastName = "Moli",
-                        Age = 34
+                        Console.WriteLine($"{counter} > Published Person [{person.FirstName} {person.LastName}]");
                     });
+
+                    await busControl.Publish(person);
+                    counter++;
+                    await Task.Delay(3000);
                 }
             }
             finally
@@ -57,5 +53,8 @@ namespace TadbirTest.ConsoleApp.RabbitMQ
                 await busControl.StopAsync();
             }
         }
+
+
+
     }
 }

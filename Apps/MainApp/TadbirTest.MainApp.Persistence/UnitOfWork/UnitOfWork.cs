@@ -39,7 +39,7 @@ namespace TadbirTest.MainApp.Persistence.UnitOfWork
 
         private void ManageConnection()
         {
-            if (dbConnection.State == ConnectionState.Closed)
+            if (dbConnection.State != ConnectionState.Open)
                 dbConnection.Open();
         }
     }
