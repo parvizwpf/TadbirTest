@@ -40,8 +40,5 @@ namespace TadbirTest.ConsoleApp.RabbitMQ
                 await busControl.StopAsync();
             }
         }
-
-
-
     }
 }

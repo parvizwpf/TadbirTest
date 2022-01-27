@@ -55,3 +55,25 @@
 2022-01-27 21:49:57.096 +03:30 [INF] Received: Person > Kaeqyjae Sabutaemy
 2022-01-27 21:50:00.494 +03:30 [INF] Received: Person > SHuzhaemo Fovoboxy
 2022-01-27 21:50:04.046 +03:30 [INF] Received: Person > Xinege Lolokuby
+2022-01-27 22:10:19.826 +03:30 [INF] Configured endpoint testQueue, Consumer: TadbirTest.MainApp.WorkerService.Consumers.PersonConsumer
+2022-01-27 22:10:20.376 +03:30 [INF] Worker running at: "2022-01-27T22:10:20.3758073+03:30"
+2022-01-27 22:10:20.377 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-27 22:10:20.377 +03:30 [INF] Hosting environment: Development
+2022-01-27 22:10:20.377 +03:30 [INF] Content root path: D:\Projects\Tadbir\TadbirTest\Apps\MainApp\TadbirTest.MainApp.WorkerService
+2022-01-27 22:10:20.717 +03:30 [INF] Bus started: "rabbitmq://localhost/"
+2022-01-27 22:25:30.599 +03:30 [INF] Configured endpoint testQueue, Consumer: TadbirTest.MainApp.WorkerService.Consumers.PersonConsumer
+2022-01-27 22:25:31.177 +03:30 [INF] Worker running at: "2022-01-27T22:25:31.1775696+03:30"
+2022-01-27 22:25:31.179 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-27 22:25:31.179 +03:30 [INF] Hosting environment: Development
+2022-01-27 22:25:31.179 +03:30 [INF] Content root path: D:\Projects\Tadbir\TadbirTest\Apps\MainApp\TadbirTest.MainApp.WorkerService
+2022-01-27 22:25:31.609 +03:30 [INF] Bus started: "rabbitmq://localhost/"
+2022-01-27 22:25:31.887 +03:30 [INF] Received: Person > Qyfihe Refykuje
+2022-01-27 22:25:33.066 +03:30 [INF] Received: Person > Pypela Qaemyjewy
+2022-01-27 22:25:36.301 +03:30 [INF] Received: Person > Curini Pygenesha
+2022-01-27 22:25:39.558 +03:30 [INF] Received: Person > Pyzhagi Jihiposhi
+2022-01-27 22:25:42.839 +03:30 [INF] Received: Person > Ryraeka Pykimydo
+2022-01-27 22:25:46.143 +03:30 [INF] Received: Person > Sefysy SHidejyla
+2022-01-27 22:25:49.227 +03:30 [INF] Received: Person > Laezhavy Fuqelifa
+2022-01-27 22:25:52.452 +03:30 [INF] Received: Person > Ninyvae Lalokebae
+2022-01-27 22:25:55.672 +03:30 [INF] Received: Person > Sysutu Dowawynu
+2022-01-27 22:25:58.906 +03:30 [INF] Received: Person > Mavujo Luxysaegy

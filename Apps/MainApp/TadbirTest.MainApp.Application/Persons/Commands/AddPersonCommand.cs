@@ -19,7 +19,11 @@ namespace TadbirTest.MainApp.Application.Persons.Commands
 
         public class AddPersonCommandHandler : ApplicationBase, IRequestHandler<AddPersonCommand, bool>
         {
-            public AddPersonCommandHandler(IConnectionConfig connectionConfig, IUnitOfWork unitOfWork, IMediator mediator) : base(connectionConfig, unitOfWork, mediator)
+            public AddPersonCommandHandler(
+                IConnectionConfig connectionConfig,
+                IUnitOfWork unitOfWork,
+                IMediator mediator) : 
+                base(connectionConfig, unitOfWork, mediator)
             {
             }
 

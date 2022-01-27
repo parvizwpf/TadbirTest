@@ -11,10 +11,11 @@ namespace TadbirTest.MainApp.Persistence
         public static IServiceCollection AddPersistanceServices(this IServiceCollection services)
         {
             services.AddSingleton<IDbConnection>(conn =>
-                new SqlConnection(conn.GetService<IConnectionConfig>().SqlConnection)
-            );
+                new SqlConnection(conn.GetService<IConnectionConfig>().SqlConnection));
+
             services.AddSingleton<IUnitOfWork>(uof =>
             new UnitOfWork.UnitOfWork(uof.GetService<IDbConnection>()));
+
             return services;
         }
     }

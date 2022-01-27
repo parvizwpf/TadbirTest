@@ -26,9 +26,10 @@ namespace TadbirTest.MainApp.WorkerService
                 .ConfigureServices((hostContext, services) =>
                 {
                     IConfiguration configuration = hostContext.Configuration;
+
                     services.AddSingleton<IConnectionConfig, ConnectionConfig>();
                     services.AddApplicationServices();
-                    services.AddInfrastructureServices();
+                    services.AddInfrastructureServices(configuration);
                     services.AddPersistanceServices();
 
                     var rabbitConfig = configuration.Get<BaseConfig>().RabbitMQConfig;
@@ -49,6 +50,7 @@ namespace TadbirTest.MainApp.WorkerService
                         });
                     });
                     services.AddMassTransitHostedService();
+
                     services.AddHostedService<Worker>();
                 })
                 .UseSerilog((context, services, configuration) => configuration

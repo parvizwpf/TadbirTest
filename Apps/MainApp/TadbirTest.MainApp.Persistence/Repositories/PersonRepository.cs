@@ -1,4 +1,5 @@
-﻿using Dapper.Contrib.Extensions;
+﻿using Dapper;
+using Dapper.Contrib.Extensions;
 using System.Data;
 using System.Threading.Tasks;
 using TadbirTest.MainApp.Domain.Entities.Persons;
@@ -13,9 +14,24 @@ namespace TadbirTest.MainApp.Persistence.Repositories
         {
         }
 
-        public async Task Insert(Person person)
+        public Task<int> Insert(Person person)
         {
-            await DbConnection.InsertAsync(person);
+            //using Dapper.Contrib
+            return DbConnection.InsertAsync(person);
         }
+
+        //public Task<int> Inserts(Person person)
+        //{
+        //    //using Dapper
+        //    string query = "INSERT INTO [Person] (FirstName,LastName,Age) Values (@FirstName,@LastName,@Age);";
+
+        //    return DbConnection.ExecuteAsync(query,
+        //        new
+        //        {
+        //            FirstName = person.FirstName,
+        //            LastName = person.FirstName,
+        //            Age = person.Age
+        //        });
+        //}
     }
 }

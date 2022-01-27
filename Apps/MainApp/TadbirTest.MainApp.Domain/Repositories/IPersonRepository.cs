@@ -5,6 +5,6 @@ namespace TadbirTest.MainApp.Domain.Repositories
 {
     public interface IPersonRepository
     {
-        Task Insert(Person person);
+        Task<int> Insert(Person person);
     }
 }

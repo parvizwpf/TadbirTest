@@ -2,8 +2,8 @@
 
 namespace TadbirTest.MainApp.Infrastructure.Redis.Interfaces
 {
-    public interface IDistrbutedCacheHelper
+    public interface IDistributedCacheHelper
     {
-        Task SetAsync(object obj);
+        Task SetAsync(string key, object obj);
     }
 }

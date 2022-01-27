@@ -1,12 +1,11 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
-using System;
 using System.Threading.Tasks;
 using TadbirTest.MainApp.Infrastructure.Redis.Interfaces;
 using TadbirTest.Shared.Helpers;
 
 namespace TadbirTest.MainApp.Infrastructure.Redis
 {
-    public class DistributedCacheHelper : IDistrbutedCacheHelper
+    public class DistributedCacheHelper : IDistributedCacheHelper
     {
         private readonly IDistributedCache cache;
 
@@ -15,10 +14,10 @@ namespace TadbirTest.MainApp.Infrastructure.Redis
             this.cache = cache;
         }
 
-        public async Task SetAsync(object obj)
+        public async Task SetAsync(string key, object obj)
         {
             var model = obj.ToByteArray();
-            await cache.SetAsync($"Person_{Guid.NewGuid()}", model);
+            await cache.SetAsync(key, model);
         }
     }
 }

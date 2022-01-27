@@ -10,8 +10,10 @@ namespace TadbirTest.MainApp.Application.Base
         public IConnectionConfig ConnectionConfig { get; set; }
         public IMediator Mediator;
 
-        public ApplicationBase(IConnectionConfig connectionConfig,
-            IUnitOfWork unitOfWork, IMediator mediator)
+        public ApplicationBase(
+            IConnectionConfig connectionConfig,
+            IUnitOfWork unitOfWork,
+            IMediator mediator)
         {
             ConnectionConfig = connectionConfig;
             UnitOfWork = unitOfWork;
