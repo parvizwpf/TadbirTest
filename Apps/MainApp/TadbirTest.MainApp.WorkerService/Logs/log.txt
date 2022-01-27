@@ -1,0 +1,57 @@
+2022-01-27 20:11:42.712 +03:30 [INF] Configured endpoint testQueue, Consumer: TadbirTest.MainApp.WorkerService.Consumers.PersonConsumer
+2022-01-27 20:11:43.631 +03:30 [INF] Worker running at: "2022-01-27T20:11:43.6306066+03:30"
+2022-01-27 20:11:43.632 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-27 20:11:43.632 +03:30 [INF] Hosting environment: Development
+2022-01-27 20:11:43.632 +03:30 [INF] Content root path: D:\Projects\Tadbir\TadbirTest\Apps\MainApp\TadbirTest.MainApp.WorkerService
+2022-01-27 20:11:44.384 +03:30 [INF] Bus started: "rabbitmq://localhost/"
+2022-01-27 20:11:44.929 +03:30 [INF] Received: Person > Dubufae Pilunice
+2022-01-27 20:11:44.929 +03:30 [INF] Received: Person > Qynuvu ZHilitedy
+2022-01-27 20:11:46.819 +03:30 [INF] Received: Person > ZHaxezhu Toqaeviha
+2022-01-27 20:11:50.133 +03:30 [INF] Received: Person > Ruzhipae Miwashefe
+2022-01-27 20:11:53.365 +03:30 [INF] Received: Person > Duvifu Nefedovo
+2022-01-27 20:11:56.771 +03:30 [INF] Received: Person > Lewisu Loretazhy
+2022-01-27 20:11:59.978 +03:30 [INF] Received: Person > Xatuhy Jijivini
+2022-01-27 20:12:03.194 +03:30 [INF] Received: Person > Dewiqa Faeryluci
+2022-01-27 20:12:06.472 +03:30 [INF] Received: Person > Fewesy Raemaekexi
+2022-01-27 20:12:09.663 +03:30 [INF] Received: Person > Kahaja Wesanishu
+2022-01-27 20:14:23.679 +03:30 [INF] Configured endpoint testQueue, Consumer: TadbirTest.MainApp.WorkerService.Consumers.PersonConsumer
+2022-01-27 20:14:24.248 +03:30 [INF] Worker running at: "2022-01-27T20:14:24.2482951+03:30"
+2022-01-27 20:14:24.250 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-27 20:14:24.250 +03:30 [INF] Hosting environment: Development
+2022-01-27 20:14:24.250 +03:30 [INF] Content root path: D:\Projects\Tadbir\TadbirTest\Apps\MainApp\TadbirTest.MainApp.WorkerService
+2022-01-27 20:14:24.611 +03:30 [INF] Bus started: "rabbitmq://localhost/"
+2022-01-27 20:14:24.891 +03:30 [INF] Received: Person > Pocako Jijaewozho
+2022-01-27 20:14:25.913 +03:30 [INF] Received: Person > Wonajo Kaevekopi
+2022-01-27 20:14:29.049 +03:30 [INF] Received: Person > Vaesyce Hupeqaevu
+2022-01-27 21:24:00.642 +03:30 [INF] Configured endpoint testQueue, Consumer: TadbirTest.MainApp.WorkerService.Consumers.PersonConsumer
+2022-01-27 21:24:01.422 +03:30 [INF] Worker running at: "2022-01-27T21:24:01.4216487+03:30"
+2022-01-27 21:24:01.423 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-27 21:24:01.423 +03:30 [INF] Hosting environment: Development
+2022-01-27 21:24:01.423 +03:30 [INF] Content root path: D:\Projects\Tadbir\TadbirTest\Apps\MainApp\TadbirTest.MainApp.WorkerService
+2022-01-27 21:24:01.811 +03:30 [INF] Bus started: "rabbitmq://localhost/"
+2022-01-27 21:24:02.116 +03:30 [INF] Received: Person > Cucuqae Lilaeguto
+2022-01-27 21:24:02.886 +03:30 [INF] Received: Person > Jaecoma Fixashiqe
+2022-01-27 21:24:05.965 +03:30 [INF] Received: Person > Mohara Dozhokazhe
+2022-01-27 21:49:08.786 +03:30 [INF] Configured endpoint testQueue, Consumer: TadbirTest.MainApp.WorkerService.Consumers.PersonConsumer
+2022-01-27 21:49:09.326 +03:30 [INF] Worker running at: "2022-01-27T21:49:09.3260119+03:30"
+2022-01-27 21:49:09.345 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-27 21:49:09.345 +03:30 [INF] Hosting environment: Development
+2022-01-27 21:49:09.345 +03:30 [INF] Content root path: D:\Projects\Tadbir\TadbirTest\Apps\MainApp\TadbirTest.MainApp.WorkerService
+2022-01-27 21:49:09.647 +03:30 [INF] Bus started: "rabbitmq://localhost/"
+2022-01-27 21:49:11.489 +03:30 [INF] Received: Person > SHelyku ZHaesaemuke
+2022-01-27 21:49:14.415 +03:30 [INF] Received: Person > Tudybu Puzhodohe
+2022-01-27 21:49:17.510 +03:30 [INF] Received: Person > SHywula Jojefybe
+2022-01-27 21:49:20.727 +03:30 [INF] Received: Person > Posashi Tyqyceji
+2022-01-27 21:49:24.185 +03:30 [INF] Received: Person > SHejyla Pudilodi
+2022-01-27 21:49:27.491 +03:30 [INF] Received: Person > Bogyvae SHenajefu
+2022-01-27 21:49:31.007 +03:30 [INF] Received: Person > SHulurae Gopylily
+2022-01-27 21:49:34.273 +03:30 [INF] Received: Person > Kapaeci Faleshili
+2022-01-27 21:49:37.522 +03:30 [INF] Received: Person > Quhyqi Letaenanu
+2022-01-27 21:49:40.796 +03:30 [INF] Received: Person > Kaehyxi Wehuqowy
+2022-01-27 21:49:43.870 +03:30 [INF] Received: Person > Daeshiqu Bugoceta
+2022-01-27 21:49:47.199 +03:30 [INF] Received: Person > Nusapae Padaezhulae
+2022-01-27 21:49:50.444 +03:30 [INF] Received: Person > Tuhaecy Raeweshuxi
+2022-01-27 21:49:53.807 +03:30 [INF] Received: Person > Dotifu Naxexuhy
+2022-01-27 21:49:57.096 +03:30 [INF] Received: Person > Kaeqyjae Sabutaemy
+2022-01-27 21:50:00.494 +03:30 [INF] Received: Person > SHuzhaemo Fovoboxy
+2022-01-27 21:50:04.046 +03:30 [INF] Received: Person > Xinege Lolokuby
