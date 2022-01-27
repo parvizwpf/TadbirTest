@@ -1,14 +1,17 @@
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using TadbirTest.MainApp.Infrastructure;
-using TadbirTest.MainApp.Persistence;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
-using TadbirTest.MainApp.WorkerService.Consumers;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Serilog;
+using Serilog.Events;
+using System;
+using System.IO;
 using TadbirTest.MainApp.Application;
 using TadbirTest.MainApp.Domain.Configs;
+using TadbirTest.MainApp.Infrastructure;
+using TadbirTest.MainApp.Persistence;
+using TadbirTest.MainApp.WorkerService.Consumers;
 using TadbirTest.MainApp.WorkerService.Settings;
-using System;
 
 namespace TadbirTest.MainApp.WorkerService
 {
@@ -16,7 +19,7 @@ namespace TadbirTest.MainApp.WorkerService
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            BaseConfig(args);
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -47,7 +50,31 @@ namespace TadbirTest.MainApp.WorkerService
                     });
                     services.AddMassTransitHostedService();
                     services.AddHostedService<Worker>();
-                });
+                })
+                .UseSerilog((context, services, configuration) => configuration
+                    .ReadFrom.Configuration(context.Configuration)
+                );
+
+        private static int BaseConfig(string[] args)
+        {
+            Log.Logger = new LoggerConfiguration()
+                .CreateLogger();
+
+            try
+            {
+                CreateHostBuilder(args).Build().Run();
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                Log.Information(ex, "Host terminated unexpectedly");
+                return 1;
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
+        }
     }
 
     public class RabbitMqConsts

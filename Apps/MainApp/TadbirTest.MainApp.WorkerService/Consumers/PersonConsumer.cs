@@ -12,13 +12,13 @@ namespace TadbirTest.MainApp.WorkerService.Consumers
 {
     class PersonConsumer : IConsumer<PersonMessage>
     {
-        ILogger<PersonConsumer> _logger;
+        ILogger<PersonConsumer> logger;
         private readonly IMediator mediator;
         private readonly IDistrbutedCacheHelper distrbutedCache;
 
         public PersonConsumer(ILogger<PersonConsumer> logger,IMediator mediator, IDistrbutedCacheHelper distrbutedCache)
         {
-            _logger = logger;
+            this.logger = logger;
             this.mediator = mediator;
             this.distrbutedCache = distrbutedCache;
         }
@@ -31,6 +31,7 @@ namespace TadbirTest.MainApp.WorkerService.Consumers
             var personMessage = context.Message;
             var person = personMessage.ToPersonEntity();
 
+            logger.LogInformation($"Received: Person > {person.FirstName} {person.LastName}");
             await AddPersonToSql(person);
             await AddPersonToRedis(person);
         }
