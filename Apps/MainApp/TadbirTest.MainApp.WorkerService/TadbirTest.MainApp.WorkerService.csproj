@@ -11,4 +11,12 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\TadbirTest.Shared\TadbirTest.Shared.csproj" />
+    <ProjectReference Include="..\TadbirTest.MainApp.Application\TadbirTest.MainApp.Application.csproj" />
+    <ProjectReference Include="..\TadbirTest.MainApp.Domain\TadbirTest.MainApp.Domain.csproj" />
+    <ProjectReference Include="..\TadbirTest.MainApp.Infrastructure\TadbirTest.MainApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\TadbirTest.MainApp.Persistence\TadbirTest.MainApp.Persistence.csproj" />
+  </ItemGroup>
 </Project>

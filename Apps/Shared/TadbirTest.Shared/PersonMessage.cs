@@ -2,6 +2,6 @@
 {
     public interface IPersonMessage
     {
-        public Person Person { get; set; }
+        public PersonMessage Person { get; set; }
     }
 }

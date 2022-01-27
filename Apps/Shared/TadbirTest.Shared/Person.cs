@@ -1,6 +1,6 @@
 ﻿namespace TadbirTest.Shared
 {
-    public class Person
+    public class PersonMessage
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

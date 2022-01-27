@@ -28,7 +28,7 @@ namespace TadbirTest.ConsoleApp.RabbitMQ
                     if ("quit".Equals(value, StringComparison.OrdinalIgnoreCase))
                         break;
 
-                    await busControl.Publish<IPersonMessage>(new Person
+                    await busControl.Publish<IPersonMessage>(new PersonMessage
                     {
                         FirstName = "Roli",
                         LastName = "Moli",

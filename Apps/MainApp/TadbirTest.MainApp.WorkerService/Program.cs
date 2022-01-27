@@ -1,9 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using TadbirTest.MainApp.Persistence;
 
 namespace TadbirTest.MainApp.WorkerService
 {
@@ -18,6 +15,8 @@ namespace TadbirTest.MainApp.WorkerService
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
+                    services.AddPersistanceServices();
+
                     services.AddHostedService<Worker>();
                 });
     }

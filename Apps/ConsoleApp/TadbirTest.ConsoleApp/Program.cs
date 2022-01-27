@@ -1,12 +1,13 @@
-﻿using System;
+﻿using System.Threading.Tasks;
+using TadbirTest.ConsoleApp.RabbitMQ;
 
 namespace TadbirTest.ConsoleApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            await RabbitMQPublisher.PublishPerson();
         }
     }
 }
