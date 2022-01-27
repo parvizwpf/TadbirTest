@@ -2,28 +2,21 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using TadbirTest.Shared;
 using TadbirTest.Shared.Helpers;
 
 namespace TadbirTest.ConsoleApp.RabbitMQ
 {
     public class RabbitMQPublisher
     {
-        public class RabbitMqConsts
-        {
-            public const string RabbitMqRootUri = "rabbitmq://localhost";
-            public const string RabbitMqUri = "rabbitmq://localhost/testQueue";
-            public const string UserName = "guest";
-            public const string Password = "guest";
-        }
-
-        public static async Task PublishPerson()
+        public static async Task PublishPerson(RabbitMQConfig rabbitConfig)
         {
             var busControl = Bus.Factory.CreateUsingRabbitMq(config =>
             {
-                config.Host(new Uri(RabbitMqConsts.RabbitMqRootUri), h =>
+                config.Host(new Uri(rabbitConfig.RabbitMqRootUri), h =>
                 {
-                    h.Username(RabbitMqConsts.UserName);
-                    h.Password(RabbitMqConsts.Password);
+                    h.Username(rabbitConfig.UserName);
+                    h.Password(rabbitConfig.Password);
                 });
             });
 

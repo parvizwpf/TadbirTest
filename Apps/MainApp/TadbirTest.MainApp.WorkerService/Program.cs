@@ -3,15 +3,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using Serilog.Events;
 using System;
-using System.IO;
 using TadbirTest.MainApp.Application;
 using TadbirTest.MainApp.Domain.Configs;
 using TadbirTest.MainApp.Infrastructure;
 using TadbirTest.MainApp.Persistence;
 using TadbirTest.MainApp.WorkerService.Consumers;
 using TadbirTest.MainApp.WorkerService.Settings;
+using TadbirTest.Shared;
 
 namespace TadbirTest.MainApp.WorkerService
 {
@@ -32,17 +31,18 @@ namespace TadbirTest.MainApp.WorkerService
                     services.AddInfrastructureServices();
                     services.AddPersistanceServices();
 
+                    var rabbitConfig = configuration.Get<BaseConfig>().RabbitMQConfig;
                     services.AddMassTransit(x =>
                     {
                         x.AddConsumer<PersonConsumer>();
                         x.UsingRabbitMq((context, cfg) =>
                         {
-                            cfg.Host(new Uri(RabbitMqConsts.RabbitMqRootUri), h =>
+                            cfg.Host(new Uri(rabbitConfig.RabbitMqRootUri), h =>
                             {
-                                h.Username(RabbitMqConsts.UserName);
-                                h.Password(RabbitMqConsts.Password);
+                                h.Username(rabbitConfig.UserName);
+                                h.Password(rabbitConfig.Password);
                             });
-                            cfg.ReceiveEndpoint("testQueue", e =>
+                            cfg.ReceiveEndpoint(rabbitConfig.QueueName, e =>
                             {
                                 e.ConfigureConsumer<PersonConsumer>(context);
                             });
@@ -75,13 +75,5 @@ namespace TadbirTest.MainApp.WorkerService
                 Log.CloseAndFlush();
             }
         }
-    }
-
-    public class RabbitMqConsts
-    {
-        public const string RabbitMqRootUri = "rabbitmq://localhost";
-        public const string RabbitMqUri = "rabbitmq://localhost/testQueue";
-        public const string UserName = "guest";
-        public const string Password = "guest";
     }
 }

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TadbirTest.ConsoleApp": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ENVIRONMENT": "Developmnet"
+      }
+    }
+  }
+}
