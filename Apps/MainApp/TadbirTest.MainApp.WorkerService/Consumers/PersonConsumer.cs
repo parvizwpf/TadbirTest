@@ -28,12 +28,19 @@ namespace TadbirTest.MainApp.WorkerService.Consumers
 
         public async Task Consume(ConsumeContext<PersonMessage> context)
         {
-            var personMessage = context.Message;
-            var person = personMessage.ToPersonEntity();
+            try
+            {
+                var personMessage = context.Message;
+                var person = personMessage.ToPersonEntity();
 
-            CreatePersonLog(person);
-            await AddPersonToSql(person);
-            await AddPersonToRedis(person);
+                CreatePersonLog(person);
+                await AddPersonToSql(person);
+                await AddPersonToRedis(person);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         private void CreatePersonLog(Person person)

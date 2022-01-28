@@ -16,8 +16,15 @@ namespace TadbirTest.MainApp.Infrastructure.Redis
 
         public async Task SetAsync(string key, object obj)
         {
-            var model = obj.ToByteArray();
-            await cache.SetAsync(key, model);
+            try
+            {
+                var model = obj.ToByteArray();
+                await cache.SetAsync(key, model);
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

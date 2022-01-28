@@ -22,15 +22,22 @@ namespace TadbirTest.MainApp.Application.Persons.Commands
             public AddPersonCommandHandler(
                 IConnectionConfig connectionConfig,
                 IUnitOfWork unitOfWork,
-                IMediator mediator) : 
+                IMediator mediator) :
                 base(connectionConfig, unitOfWork, mediator)
             {
             }
 
             public async Task<bool> Handle(AddPersonCommand request, CancellationToken cancellationToken)
             {
-                await UnitOfWork.PersonRepository.Insert(request.Model);
-                return true;
+                try
+                {
+                    await UnitOfWork.PersonRepository.Insert(request.Model);
+                    return true;
+                }
+                catch
+                {
+                    throw;
+                }
             }
         }
     }

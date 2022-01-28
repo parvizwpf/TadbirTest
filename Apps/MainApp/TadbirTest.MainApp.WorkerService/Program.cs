@@ -1,3 +1,4 @@
+using GreenPipes;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -45,6 +46,15 @@ namespace TadbirTest.MainApp.WorkerService
                             });
                             cfg.ReceiveEndpoint(rabbitConfig.QueueName, e =>
                             {
+                                //can use retry
+                                //e.UseRetry(r => r.Immediate(5));
+                                //can use circuit breaker
+                                //e.UseCircuitBreaker(cb =>
+                                //{
+                                //    cb.TripThreshold = 15;
+                                //    cb.ActiveThreshold = 10;
+                                //    cb.ResetInterval = TimeSpan.FromMinutes(5);
+                                //});
                                 e.ConfigureConsumer<PersonConsumer>(context);
                             });
                         });
